@@ -257,13 +257,16 @@ $expected = "asdf\nasdf\nasdfzxcv\n";
 ex17
 char* ft_strncat(char* dest, char* src, int nb)
 main -m ====
-char test[256] = "\0zxcvzxcvzxcvxzcvzxcvzxcv";
+char test[256] = "zxcvzxcvzxcvxzcvzxcvzxcv";
+char test1[256] = "zxcvzxcvzxcvxzcvzxcvzxcv";
+char test2[256] = "zxcvzxcvzxcvxzcvzxcvzxcv";
+char test3[256] = "zxcvzxcvzxcvxzcvzxcvzxcv";
 printf("%s\n", ft_strncat(test, "asdf", 16));
-printf("%s\n", ft_strncat(test, "", 16));
-printf("%s\n", ft_strncat(test, "qwerty", 0));
-printf("%s\n", ft_strncat(test, "asdf", 3));
+printf("%s\n", ft_strncat(test1, "", 16));
+printf("%s\n", ft_strncat(test2, "qwerty", 0));
+printf("%s\n", ft_strncat(test3, "asdf", 3));
 ==== check -e ====
-$expected = "asdf\nasdf\nasdf\nasdfasd\n";
+$expected = "zxcvzxcvzxcvxzcvzxcvzxcvasdf\nzxcvzxcvzxcvxzcvzxcvzxcv\nqwerty\nqwertyasd\n";
 ====
 
 
