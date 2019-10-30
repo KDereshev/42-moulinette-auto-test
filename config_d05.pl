@@ -67,11 +67,13 @@ ex04
 char* ft_strncpy(char* dest, unsigned int n)
 main -m ====
 char test1[256] = "asdf";
+char test2[256] = "asdf";
+char test3[256] = "asdf";
 printf("%s\n", ft_strncpy(test1, "uiop", 5));
-printf("%s\n", ft_strncpy(test1, "qwerty", 4));
-printf("%s\n", ft_strncpy(test1, "z", 1));
+printf("%s\n", ft_strncpy(test2, "qwerty", 4));
+printf("%s\n", ft_strncpy(test3, "z", 1));
 ==== check -e ====
-$expected = "uiop\nqwer\nzwer\n";
+$expected = "uiop\nqwer\nzsdf\n";
 ====
 
 
